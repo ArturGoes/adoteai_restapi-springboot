@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AdoteMatch AI</title>
+</head>
+<body>
+<h1 th:text="${message}"></h1>
+<p th:if="${result}" th:text="${result}"></p>
+
+<!-- Form RBC -->
+<form action="/rbc" method="post">
+    <h2>RBC: Recomendação de Pet</h2>
+    Espaço (m²): <input type="number" name="space"><br>
+    Tempo (horas/dia): <input type="number" name="time"><br>
+    Pref Temper (0/1): <input type="number" name="prefTemper"><br>
+    <button type="submit">Recomendar</button>
+</form>
+
+<!-- Form A* -->
+<form action="/astar" method="post">
+    <h2>A*: Caminho para Abrigo</h2>
+    Sua Pos X: <input type="number" name="startX"><br>
+    Sua Pos Y: <input type="number" name="startY"><br>
+    Abrigo Goal ID (1-3): <input type="number" name="goalId"><br>
+    <button type="submit">Encontrar Caminho</button>
+</form>
+
+<!-- Form Prolog -->
+<form action="/prolog" method="post">
+    <h2>Prolog: Raças por Temper</h2>
+    Temperamento: <input type="text" name="temper"><br>
+    <button type="submit">Consultar</button>
+</form>
+</body>
+</html>
