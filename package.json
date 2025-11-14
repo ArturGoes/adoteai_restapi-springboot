@@ -1,0 +1,11 @@
+{
+  "name": "adoteai_restapi-springboot",
+  "version": "1.0.0",
+  "description": "Frontend static server for adoteai Spring Boot project",
+  "scripts": {
+    "dev": "live-server src/main/resources/static --port=5173 --open"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
