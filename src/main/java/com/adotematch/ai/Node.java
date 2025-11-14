@@ -1,8 +1,8 @@
 package com.adotematch.ai;
 
 public class Node implements Comparable<Node> {
-    private int id;
-    private double x, y;
+    private final int id;
+    private final double x, y;
     private double g, h, f;
     private Node parent;
 
