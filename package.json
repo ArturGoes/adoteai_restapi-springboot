@@ -2,9 +2,14 @@
   "name": "adoteai_restapi-springboot",
   "version": "1.0.0",
   "description": "Frontend static server for adoteai Spring Boot project",
+  "main": "index.js",
   "scripts": {
-    "dev": "live-server src/main/resources/static --port=5173 --open"
+    "dev": "live-server src/main/resources/static --port=5173 --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.2"
   }
