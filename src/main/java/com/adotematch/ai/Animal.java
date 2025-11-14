@@ -1,4 +1,4 @@
-package adotematch;
+package com.adotematch.ai;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class Animal {
-    private String id;
+    private final String id;
     private String raca;
     private int idade;
     private String sexo;

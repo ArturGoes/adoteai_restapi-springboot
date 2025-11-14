@@ -1,4 +1,4 @@
-package adotematch;
+package com.adotematch.ai;
 
 public class Adotante extends Usuario {
     private String endereco;

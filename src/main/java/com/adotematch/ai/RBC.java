@@ -1,7 +1,7 @@
 package com.adotematch.ai;
 
 public class RBC {
-    private CaseBase caseBase = new CaseBase();
+    private final CaseBase caseBase = new CaseBase();
 
     // Retrieve: Encontra caso similar
     public Case retrieveSimilarCase(Case newCase) {

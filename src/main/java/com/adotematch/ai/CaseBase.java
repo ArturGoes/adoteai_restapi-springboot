@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CaseBase {
-    private List<Case> cases = new ArrayList<>();
+    private final List<Case> cases = new ArrayList<>();
 
     public CaseBase() {
         // Popular com dados sintéticos do seu relatório (1000 amostras simplificadas para 5 exemplos)

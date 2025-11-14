@@ -1,9 +1,9 @@
-package adotematch;
+package com.adotematch.ai;
 
 import java.util.Date;
 
 public class Adocao {
-    private String id;
+    private final String id;
     private Adotante adotante;
     private Animal animal;
     private Date dataSolicitacao;
