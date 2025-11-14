@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdoteMatch AI - Tela Principal</title>
+    <link rel="stylesheet" href="tela_principalStyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>AdoteMatch AI</h1>
+            <ul>
+                <li><a href="/tela_principal/" class="active">Início</a></li>
+                <li><a href="/adoteMatchAi/">Match AI</a></li>
+                <li><a href="#" id="perfil-link">Meu Perfil</a></li>
+                <li><a href="#" id="logout-link">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="welcome-section">
+            <h2>Bem-vindo(a), <span id="user-name">Adotante!</span></h2>
+            <p>Seu lar está pronto para receber um novo amigo? Explore as funcionalidades abaixo.</p>
+        </section>
+
+        <section class="features-grid">
+            <div class="feature-card" onclick="window.location.href='/adoteMatchAi/'">
+                <div class="icon">🤖</div>
+                <h3>Match com IA</h3>
+                <p>Descubra o pet ideal para você com base no seu perfil e estilo de vida.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🐾</div>
+                <h3>Animais Disponíveis</h3>
+                <p>Veja todos os animais que estão aguardando um lar amoroso.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📝</div>
+                <h3>Meus Formulários</h3>
+                <p>Acompanhe o status dos seus formulários de adoção enviados.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🏠</div>
+                <h3>Abrigos Parceiros</h3>
+                <p>Encontre abrigos e veterinários próximos à sua localização.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="tela_principalScript.js"></script>
+</body>
+</html>
