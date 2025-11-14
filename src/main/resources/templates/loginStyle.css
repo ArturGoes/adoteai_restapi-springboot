@@ -1,0 +1,108 @@
+:root {
+    --color-primary: #3A86FF;
+    --color-secondary: #2EC4B6;
+    --color-white: #FFFFFF;
+    --color-background: #f4f7f6;
+    --color-text: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--color-text);
+}
+
+.container {
+    background-color: var(--color-white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.tab-button {
+    flex-grow: 1;
+    padding: 10px 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #aaa;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-button.active {
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.form-box {
+    display: none;
+}
+
+.form-box.active {
+    display: block;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="text"],
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #25a095; /* Um tom um pouco mais escuro de --color-secondary */
+}
