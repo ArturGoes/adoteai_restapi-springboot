@@ -1,8 +1,6 @@
-package adotematch;
+package com.adotematch.ai;
 
 import java.util.Date;
-
-import static adotematch.Animal.Status;  // Import static para enum
 
 public class Administrador extends Usuario {
     private Abrigo abrigoGerenciado;
@@ -29,6 +27,6 @@ public class Administrador extends Usuario {
     // RF7: Aprovar adoção
     public void aprovarAdocao(Adocao adocao) {
         adocao.setStatus(Adocao.Status.APROVADA);
-        adocao.getAnimal().registrarSaida(new Date(), Status.ADOTADO);
+        adocao.getAnimal().registrarSaida(new Date(), Animal.Status.ADOTADO);
     }
 }

@@ -1,4 +1,4 @@
-package adotematch;
+package com.adotematch.ai;
 
 public class FormularioAdocao {
     private Adotante adotante;

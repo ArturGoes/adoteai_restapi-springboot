@@ -4,8 +4,8 @@ import java.util.*;
 
 public class AStar {
     // Grafo simples: abrigos com coordenadas fictícias (baseado em endereços do BD)
-    private Map<Integer, Node> shelters = new HashMap<>();
-    private Map<Integer, List<Integer>> graph = new HashMap<>();  // Conexões entre abrigos
+    private final Map<Integer, Node> shelters = new HashMap<>();
+    private final Map<Integer, List<Integer>> graph = new HashMap<>();  // Conexões entre abrigos
 
     public AStar() {
         // Abrigos fictícios

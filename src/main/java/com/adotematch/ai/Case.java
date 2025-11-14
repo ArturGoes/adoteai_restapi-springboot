@@ -1,13 +1,13 @@
 package com.adotematch.ai;
 
 public class Case {
-    private double adopterSpace;
-    private double adopterTime;
-    private int adopterPrefTemper;
-    private int petSize;
-    private int petTemper;
-    private double petAge;
-    private int match;
+    private final double adopterSpace;
+    private final double adopterTime;
+    private final int adopterPrefTemper;
+    private final int petSize;
+    private final int petTemper;
+    private final double petAge;
+    private final int match;
 
     public Case(double adopterSpace, double adopterTime, int adopterPrefTemper, int petSize, int petTemper, double petAge, int match) {
         this.adopterSpace = adopterSpace;

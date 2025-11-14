@@ -47,7 +47,7 @@ public class AIController {
             List<Map<String, String>> results = prolog.queryDogBreedsByTemper(temper);
             model.addAttribute("result", "Raças Prolog: " + results);
         } catch (Exception e) {
-            model.addAttribute("result", "Erro no Prolog: " + e.getMessage());  // Para depurar
+            model.addAttribute("result", "Erro no Prolog: " + e.getMessage());
         }
         return "index";
     }
