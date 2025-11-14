@@ -1,4 +1,4 @@
-package adotematch;
+package com.adotematch.ai;
 
 public abstract class Usuario {
     protected String id;

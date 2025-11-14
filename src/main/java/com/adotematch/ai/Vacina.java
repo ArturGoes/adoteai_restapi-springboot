@@ -1,4 +1,4 @@
-package adotematch;
+package com.adotematch.ai;
 
 import java.util.Date;
 

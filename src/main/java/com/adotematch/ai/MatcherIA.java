@@ -1,9 +1,7 @@
-package adotematch;
+package com.adotematch.ai;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static adotematch.Animal.Temperamento;  // Import static para enum
 
 public class MatcherIA {
     // Simples heurística por agora; expandir com ML real
@@ -21,7 +19,7 @@ public class MatcherIA {
         if (form.getEspacoEmCasa() < 50 && !animal.getTamanho().equals("pequeno")) {
             return false;
         }
-        if (form.getTempoDisponivel() < 4 && animal.getTemperamento() == Temperamento.ATIVO) {
+        if (form.getTempoDisponivel() < 4 && animal.getTemperamento() == Animal.Temperamento.ATIVO) {
             return false;
         }
         return true;
