@@ -66,4 +66,4 @@ public class WebController {
         model.addAttribute("resultadoMatch", "Animal recomendado: Cachorro, raça: Golden Retriever, temperamento: Amigável");
         return "adoteMatchAi";
     }
-}
+}// test
