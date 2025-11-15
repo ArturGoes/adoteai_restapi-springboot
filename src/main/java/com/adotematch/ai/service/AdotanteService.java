@@ -20,3 +20,5 @@ public class AdotanteService {
         return adotante != null && adotante.getSenha().equals(senha); // Simplificado, use hash em produção
     }
 }
+
+//as rotas aqui

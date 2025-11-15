@@ -67,3 +67,5 @@ public class WebController {
         return "adoteMatchAi";
     }
 }
+
+//as rotas aqui

@@ -37,3 +37,5 @@ public class Adotante {
 
     private String senha;
 }
+
+//as rotas aqui
