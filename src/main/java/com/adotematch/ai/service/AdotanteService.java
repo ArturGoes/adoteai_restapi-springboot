@@ -19,11 +19,4 @@ public class AdotanteService {
         Adotante adotante = adotanteRepository.findByEmail(email);
         return adotante != null && adotante.getSenha().equals(senha); // Simplificado, use hash em produção
     }
-<<<<<<< Updated upstream
 }
-=======
-}
-
-//as rotas aqui
-//as rotas aqui
->>>>>>> Stashed changes

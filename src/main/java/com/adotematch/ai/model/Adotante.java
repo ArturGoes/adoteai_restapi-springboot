@@ -36,11 +36,4 @@ public class Adotante {
     private int tempoDisponivel;
 
     private String senha;
-<<<<<<< Updated upstream
 }
-=======
-}
-
-//as rotas aqui
-//as rotas aqui
->>>>>>> Stashed changes
