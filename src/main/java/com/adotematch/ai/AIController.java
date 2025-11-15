@@ -16,13 +16,13 @@ public class AIController {
     private final AStar aStar = new AStar();
     private final PrologIntegrator prolog = new PrologIntegrator();
 
-    @GetMapping("/")
+    @GetMapping("/api")
     public String index(Model model) {
         model.addAttribute("message", "Bem-vindo ao AdoteMatch AI");
         return "index";
     }
 
-    @PostMapping("/rbc")
+    @PostMapping("/api/rbc")
     public String rbc(@RequestParam double space, @RequestParam double time, @RequestParam int prefTemper, Model model) {
         Case newCase = new Case(space, time, prefTemper, 0, 0, 0, 0);
         Case similar = rbc.retrieveSimilarCase(newCase);
@@ -30,7 +30,7 @@ public class AIController {
         return "index";
     }
 
-    @PostMapping("/astar")
+    @PostMapping("/api/astar")
     public String astar(@RequestParam double startX, @RequestParam double startY, @RequestParam int goalId, Model model) {
         List<Node> path = aStar.findPath(startX, startY, goalId);
         StringBuilder sb = new StringBuilder("Caminho A*: ");
@@ -41,7 +41,7 @@ public class AIController {
         return "index";
     }
 
-    @PostMapping("/prolog")
+    @PostMapping("/api/prolog")
     public String prolog(@RequestParam String temper, Model model) {
         try {
             List<Map<String, String>> results = prolog.queryDogBreedsByTemper(temper);

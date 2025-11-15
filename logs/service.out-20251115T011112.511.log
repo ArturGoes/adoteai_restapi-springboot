@@ -1,0 +1,49 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2025-11-14T22:08:40.331-03:00  INFO 22624 --- [ai] [           main] com.adotematch.ai.Application            : Starting Application v0.0.1-SNAPSHOT using Java 23 with PID 22624 (C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot\target\ai-0.0.1-SNAPSHOT.jar started by DESKTOP-P77NK0H$ in C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot)
+2025-11-14T22:08:40.334-03:00  INFO 22624 --- [ai] [           main] com.adotematch.ai.Application            : No active profile set, falling back to 1 default profile: "default"
+2025-11-14T22:08:41.155-03:00  INFO 22624 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-14T22:08:41.181-03:00  INFO 22624 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2025-11-14T22:08:41.702-03:00  INFO 22624 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-14T22:08:41.716-03:00  INFO 22624 --- [ai] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-14T22:08:41.716-03:00  INFO 22624 --- [ai] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-14T22:08:41.746-03:00  INFO 22624 --- [ai] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-14T22:08:41.747-03:00  INFO 22624 --- [ai] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1347 ms
+2025-11-14T22:08:42.017-03:00  INFO 22624 --- [ai] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-14T22:08:42.094-03:00  INFO 22624 --- [ai] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-14T22:08:42.134-03:00  INFO 22624 --- [ai] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-14T22:08:42.457-03:00  INFO 22624 --- [ai] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-14T22:08:42.492-03:00  INFO 22624 --- [ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool - Starting...
+2025-11-14T22:08:45.170-03:00  INFO 22624 --- [ai] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Added connection org.postgresql.jdbc.PgConnection@43deba42
+2025-11-14T22:08:45.172-03:00  INFO 22624 --- [ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool - Start completed.
+2025-11-14T22:08:45.387-03:00  WARN 22624 --- [ai] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-14T22:08:45.850-03:00  INFO 22624 --- [ai] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-14T22:08:46.110-03:00  INFO 22624 --- [ai] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-14T22:08:46.114-03:00  INFO 22624 --- [ai] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-14T22:08:46.155-03:00  WARN 22624 --- [ai] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-14T22:08:46.185-03:00  INFO 22624 --- [ai] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-14T22:08:46.538-03:00  INFO 22624 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-14T22:08:46.546-03:00  INFO 22624 --- [ai] [           main] com.adotematch.ai.Application            : Started Application in 6.718 seconds (process running for 7.426)
+2025-11-14T22:10:47.069-03:00  INFO 22624 --- [ai] [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-14T22:10:47.070-03:00  INFO 22624 --- [ai] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-14T22:10:47.072-03:00  INFO 22624 --- [ai] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-11-14T22:11:12.201-03:00  INFO 22624 --- [ai] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-14T22:11:12.207-03:00  INFO 22624 --- [ai] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-14T22:11:12.211-03:00  INFO 22624 --- [ai] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-14T22:11:12.213-03:00  INFO 22624 --- [ai] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool - Shutdown initiated...
+2025-11-14T22:11:12.511-03:00  INFO 22624 --- [ai] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool - Shutdown completed.
