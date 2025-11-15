@@ -66,4 +66,10 @@ public class WebController {
         model.addAttribute("resultadoMatch", "Animal recomendado: Cachorro, raça: Golden Retriever, temperamento: Amigável");
         return "adoteMatchAi";
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+//as rotas aqui
+//as rotas aqui
+>>>>>>> Stashed changes
