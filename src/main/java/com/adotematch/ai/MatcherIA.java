@@ -19,10 +19,7 @@ public class MatcherIA {
         if (form.getEspacoEmCasa() < 50 && !animal.getTamanho().equals("pequeno")) {
             return false;
         }
-        if (form.getTempoDisponivel() < 4 && animal.getTemperamento() == Animal.Temperamento.ATIVO) {
-            return false;
-        }
-        return true;
+        return !(form.getTempoDisponivel() < 4 && animal.getTemperamento() == Animal.Temperamento.ATIVO);
     }
 
     public String explicarRecomendacao(Animal animal, FormularioAdocao form) {

@@ -17,7 +17,10 @@ public class AdotanteService {
 
     public boolean validarLogin(String email, String senha) {
         Adotante adotante = adotanteRepository.findByEmail(email);
-        return adotante != null && adotante.getSenha().equals(senha); // Simplificado, use hash em produção
+        if (adotante == null || adotante.getSenha() == null) {
+            return false;
+        }
+        return adotante.getSenha().equals(senha); // Simplificado, use hash em produção
     }
 }
 
