@@ -38,4 +38,4 @@ public class Adotante {
     private String senha;
 }
 
-//as rotas aki
+//as rotas aqui
