@@ -1,0 +1,77 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2025-11-20T10:00:59.483-03:00  INFO 7608 --- [ai] [           main] com.adotematch.ai.Application            : Starting Application v0.0.1-SNAPSHOT using Java 21.0.4 with PID 7608 (C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot\target\ai-0.0.1-SNAPSHOT.jar started by DESKTOP-P77NK0H$ in C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot)
+2025-11-20T10:00:59.487-03:00  INFO 7608 --- [ai] [           main] com.adotematch.ai.Application            : No active profile set, falling back to 1 default profile: "default"
+2025-11-20T10:01:01.616-03:00  INFO 7608 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20T10:01:01.667-03:00  INFO 7608 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+2025-11-20T10:01:02.929-03:00  INFO 7608 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-20T10:01:02.982-03:00  INFO 7608 --- [ai] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-20T10:01:02.982-03:00  INFO 7608 --- [ai] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-20T10:01:03.054-03:00  INFO 7608 --- [ai] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-20T10:01:03.055-03:00  INFO 7608 --- [ai] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3472 ms
+2025-11-20T10:01:04.212-03:00  INFO 7608 --- [ai] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20T10:01:04.405-03:00  INFO 7608 --- [ai] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-20T10:01:04.547-03:00  INFO 7608 --- [ai] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-20T10:01:05.076-03:00  INFO 7608 --- [ai] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20T10:01:05.133-03:00  INFO 7608 --- [ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool - Starting...
+2025-11-20T10:01:10.685-03:00  INFO 7608 --- [ai] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Added connection org.postgresql.jdbc.PgConnection@3b021664
+2025-11-20T10:01:10.687-03:00  INFO 7608 --- [ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool - Start completed.
+2025-11-20T10:01:10.919-03:00  WARN 7608 --- [ai] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20T10:01:11.485-03:00  INFO 7608 --- [ai] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20T10:01:11.943-03:00  INFO 7608 --- [ai] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20T10:01:11.948-03:00  INFO 7608 --- [ai] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T10:01:12.003-03:00  WARN 7608 --- [ai] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20T10:01:12.043-03:00  INFO 7608 --- [ai] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-20T10:01:12.488-03:00  INFO 7608 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-20T10:01:12.501-03:00  INFO 7608 --- [ai] [           main] com.adotematch.ai.Application            : Started Application in 14.437 seconds (process running for 16.485)
+2025-11-20T10:01:53.712-03:00  INFO 7608 --- [ai] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-20T10:01:53.712-03:00  INFO 7608 --- [ai] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-20T10:01:53.713-03:00  INFO 7608 --- [ai] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-20T12:28:10.657-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=57s674ms518µs801ns).
+2025-11-20T12:28:44.793-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@75dd0afa (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-20T13:04:02.920-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m17s708ms759µs800ns).
+2025-11-20T13:04:43.367-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@4645ca7f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-20T13:20:20.008-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m16s952ms986µs).
+2025-11-20T13:21:12.704-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@7c4ef8dc (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-20T13:36:24.361-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m4s270ms813µs800ns).
+2025-11-20T13:52:37.712-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m13s233ms60µs200ns).
+2025-11-20T13:52:47.729-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@71da0b6c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-20T14:08:40.058-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m2s231ms545µs800ns).
+2025-11-20T14:08:50.080-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@463c159d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-20T14:24:38.231-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=58s78ms279µs400ns).
+2025-11-20T14:40:55.449-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m17s156ms).
+2025-11-20T14:56:56.780-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m1s228ms521µs300ns).
+2025-11-20T14:57:20.350-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@74296044 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-20T15:13:03.690-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m6s813ms267µs700ns).
+2025-11-20T15:29:35.218-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@742a8050 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-20T15:29:35.219-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m31s439ms47µs100ns).
+2025-11-20T15:45:45.513-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m10s189ms49µs200ns).
+2025-11-20T16:02:08.799-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m23s217ms4µs700ns).
+2025-11-20T16:02:36.604-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@11492291 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-20T16:18:15.775-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m6s901ms255µs100ns).
+2025-11-20T16:34:10.262-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=54s379ms853µs).
+2025-11-20T16:50:32.489-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m22s133ms66µs700ns).
+2025-11-20T19:50:32.885-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=57s910ms369µs200ns).
+2025-11-20T20:06:56.557-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m23s565ms337µs200ns).
+2025-11-20T20:07:06.588-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@41850cc2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-20T20:22:51.809-03:00  WARN 7608 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=55s146ms784µs600ns).
+2025-11-20T23:20:56.795-03:00  INFO 7608 --- [ai] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-20T23:20:56.837-03:00  INFO 7608 --- [ai] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-20T23:20:56.898-03:00  INFO 7608 --- [ai] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T23:20:56.940-03:00  INFO 7608 --- [ai] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool - Shutdown initiated...
+2025-11-20T23:20:56.949-03:00  INFO 7608 --- [ai] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool - Shutdown completed.

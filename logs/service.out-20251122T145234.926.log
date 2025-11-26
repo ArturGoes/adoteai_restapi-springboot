@@ -8,23 +8,23 @@
 
  :: Spring Boot ::                (v3.5.7)
 
-2025-11-26T09:43:08.316-03:00  INFO 7492 --- [ai] [           main] com.adotematch.ai.Application            : Starting Application v0.0.1-SNAPSHOT using Java 21.0.4 with PID 7492 (C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot\target\ai-0.0.1-SNAPSHOT.jar started by DESKTOP-P77NK0H$ in C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot)
-2025-11-26T09:43:08.320-03:00  INFO 7492 --- [ai] [           main] com.adotematch.ai.Application            : No active profile set, falling back to 1 default profile: "default"
-2025-11-26T09:43:10.115-03:00  INFO 7492 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-26T09:43:10.240-03:00  INFO 7492 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 0 JPA repository interfaces.
-2025-11-26T09:43:11.639-03:00  INFO 7492 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-11-26T09:43:11.680-03:00  INFO 7492 --- [ai] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-11-26T09:43:11.680-03:00  INFO 7492 --- [ai] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
-2025-11-26T09:43:11.760-03:00  INFO 7492 --- [ai] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-11-26T09:43:11.767-03:00  INFO 7492 --- [ai] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3352 ms
-2025-11-26T09:43:12.694-03:00  INFO 7492 --- [ai] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-26T09:43:12.847-03:00  INFO 7492 --- [ai] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
-2025-11-26T09:43:12.917-03:00  INFO 7492 --- [ai] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-11-26T09:43:13.470-03:00  INFO 7492 --- [ai] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-26T09:43:13.547-03:00  INFO 7492 --- [ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool - Starting...
-2025-11-26T09:43:14.658-03:00  WARN 7492 --- [ai] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
-2025-11-26T09:43:14.659-03:00 ERROR 7492 --- [ai] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : A tentativa de conexão falhou.
-2025-11-26T09:43:14.665-03:00  WARN 7492 --- [ai] [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2025-11-22T10:06:01.793-03:00  INFO 7772 --- [ai] [           main] com.adotematch.ai.Application            : Starting Application v0.0.1-SNAPSHOT using Java 21.0.4 with PID 7772 (C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot\target\ai-0.0.1-SNAPSHOT.jar started by DESKTOP-P77NK0H$ in C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot)
+2025-11-22T10:06:01.843-03:00  INFO 7772 --- [ai] [           main] com.adotematch.ai.Application            : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T10:06:03.643-03:00  INFO 7772 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T10:06:03.691-03:00  INFO 7772 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2025-11-22T10:06:04.545-03:00  INFO 7772 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-22T10:06:04.576-03:00  INFO 7772 --- [ai] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-22T10:06:04.577-03:00  INFO 7772 --- [ai] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-22T10:06:04.629-03:00  INFO 7772 --- [ai] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-22T10:06:04.630-03:00  INFO 7772 --- [ai] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2595 ms
+2025-11-22T10:06:05.483-03:00  INFO 7772 --- [ai] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T10:06:05.586-03:00  INFO 7772 --- [ai] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-22T10:06:05.641-03:00  INFO 7772 --- [ai] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T10:06:06.399-03:00  INFO 7772 --- [ai] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T10:06:06.479-03:00  INFO 7772 --- [ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool - Starting...
+2025-11-22T10:06:07.597-03:00  WARN 7772 --- [ai] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
+2025-11-22T10:06:07.597-03:00 ERROR 7772 --- [ai] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : A tentativa de conexão falhou.
+2025-11-22T10:06:07.599-03:00  WARN 7772 --- [ai] [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [A tentativa de conexão falhou.] [n/a]
 	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.33.Final.jar!/:6.6.33.Final]
@@ -99,8 +99,8 @@ Caused by: java.net.UnknownHostException: ep-sweet-boat-ad61ycpi-pooler.c-2.us-e
 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289) ~[postgresql-42.7.8.jar!/:42.7.8]
 	... 54 common frames omitted
 
-2025-11-26T09:43:14.736-03:00  WARN 7492 --- [ai] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-11-26T09:43:14.753-03:00  INFO 7492 --- [ai] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-11-22T10:06:07.662-03:00  WARN 7772 --- [ai] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-22T10:06:07.684-03:00  INFO 7772 --- [ai] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
 	Database driver: undefined/unknown
 	Database version: 12.0
@@ -108,9 +108,12 @@ Caused by: java.net.UnknownHostException: ep-sweet-boat-ad61ycpi-pooler.c-2.us-e
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-11-26T09:43:15.199-03:00  INFO 7492 --- [ai] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-26T09:43:15.206-03:00  INFO 7492 --- [ai] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-26T09:43:15.273-03:00  WARN 7492 --- [ai] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-26T09:43:15.318-03:00  INFO 7492 --- [ai] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2025-11-26T09:43:15.910-03:00  INFO 7492 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-11-26T09:43:15.941-03:00  INFO 7492 --- [ai] [           main] com.adotematch.ai.Application            : Started Application in 8.891 seconds (process running for 10.968)
+2025-11-22T10:06:08.614-03:00  INFO 7772 --- [ai] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T10:06:08.625-03:00  INFO 7772 --- [ai] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T10:06:08.710-03:00  WARN 7772 --- [ai] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T10:06:08.763-03:00  INFO 7772 --- [ai] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-22T10:06:09.518-03:00  INFO 7772 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-22T10:06:09.571-03:00  INFO 7772 --- [ai] [           main] com.adotematch.ai.Application            : Started Application in 8.664 seconds (process running for 10.559)
+2025-11-22T11:52:34.846-03:00  INFO 7772 --- [ai] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-22T11:52:34.902-03:00  INFO 7772 --- [ai] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-22T11:52:34.925-03:00  INFO 7772 --- [ai] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

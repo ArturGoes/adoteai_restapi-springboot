@@ -1,0 +1,57 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2025-11-24T18:18:02.806-03:00  INFO 6716 --- [ai] [           main] com.adotematch.ai.Application            : Starting Application v0.0.1-SNAPSHOT using Java 21.0.4 with PID 6716 (C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot\target\ai-0.0.1-SNAPSHOT.jar started by DESKTOP-P77NK0H$ in C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot)
+2025-11-24T18:18:02.811-03:00  INFO 6716 --- [ai] [           main] com.adotematch.ai.Application            : No active profile set, falling back to 1 default profile: "default"
+2025-11-24T18:18:03.998-03:00  INFO 6716 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-24T18:18:04.034-03:00  INFO 6716 --- [ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2025-11-24T18:18:04.691-03:00  INFO 6716 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-24T18:18:04.717-03:00  INFO 6716 --- [ai] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-24T18:18:04.717-03:00  INFO 6716 --- [ai] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-24T18:18:04.761-03:00  INFO 6716 --- [ai] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-24T18:18:04.762-03:00  INFO 6716 --- [ai] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1876 ms
+2025-11-24T18:18:05.253-03:00  INFO 6716 --- [ai] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-24T18:18:05.329-03:00  INFO 6716 --- [ai] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-24T18:18:05.371-03:00  INFO 6716 --- [ai] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-24T18:18:05.688-03:00  INFO 6716 --- [ai] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-24T18:18:05.740-03:00  INFO 6716 --- [ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool - Starting...
+2025-11-24T18:18:10.595-03:00  INFO 6716 --- [ai] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Added connection org.postgresql.jdbc.PgConnection@300bb303
+2025-11-24T18:18:10.597-03:00  INFO 6716 --- [ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool - Start completed.
+2025-11-24T18:18:10.811-03:00  WARN 6716 --- [ai] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-24T18:18:11.267-03:00  INFO 6716 --- [ai] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-24T18:18:11.543-03:00  INFO 6716 --- [ai] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-24T18:18:11.547-03:00  INFO 6716 --- [ai] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-24T18:18:11.582-03:00  WARN 6716 --- [ai] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-24T18:18:11.607-03:00  INFO 6716 --- [ai] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-24T18:18:11.945-03:00  INFO 6716 --- [ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-24T18:18:11.953-03:00  INFO 6716 --- [ai] [           main] com.adotematch.ai.Application            : Started Application in 10.114 seconds (process running for 11.901)
+2025-11-24T20:00:48.438-03:00  WARN 6716 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m6s209ms753µs700ns).
+2025-11-24T20:17:06.859-03:00  WARN 6716 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m18s315ms734µs).
+2025-11-24T20:18:03.729-03:00  INFO 6716 --- [ai] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-24T20:18:03.730-03:00  INFO 6716 --- [ai] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-24T20:18:03.740-03:00  INFO 6716 --- [ai] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2025-11-24T21:03:43.504-03:00  WARN 6716 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m6s72ms992µs400ns).
+2025-11-24T21:19:36.235-03:00  WARN 6716 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool - Failed to validate connection org.postgresql.jdbc.PgConnection@a0484e4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-24T21:19:36.241-03:00  WARN 6716 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m22s652ms38µs300ns).
+2025-11-24T21:35:40.717-03:00  WARN 6716 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m4s375ms691µs).
+2025-11-24T21:51:41.897-03:00  WARN 6716 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m1s53ms298µs100ns).
+2025-11-24T22:07:58.171-03:00  WARN 6716 --- [ai] [ool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool - Thread starvation or clock leap detected (housekeeper delta=1m16s163ms204µs300ns).
+2025-11-24T22:45:31.829-03:00  INFO 6716 --- [ai] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-24T22:45:31.876-03:00  INFO 6716 --- [ai] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-24T22:45:31.915-03:00  INFO 6716 --- [ai] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-24T22:45:31.932-03:00  INFO 6716 --- [ai] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool - Shutdown initiated...
+2025-11-24T22:45:31.940-03:00  INFO 6716 --- [ai] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool - Shutdown completed.
