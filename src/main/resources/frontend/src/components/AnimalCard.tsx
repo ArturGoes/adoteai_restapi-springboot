@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, MapPin, Check, Home } from "lucide-react";
-import { Animal } from "@/types";
+import { Animal } from "@/services/api";
 import { useFavorites } from "@/contexts/FavoritesContext";
 import { cn } from "@/lib/utils";
 
@@ -11,11 +11,12 @@ interface AnimalCardProps {
 const AnimalCard = ({ animal }: AnimalCardProps) => {
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorite = isFavorite(animal.id);
+  const isDisponivel = animal.status === "DISPONIVEL";
 
   const handleFavoriteClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    if (animal.disponivel) {
+    if (isDisponivel) {
       toggleFavorite(animal.id);
     }
   };
@@ -24,12 +25,12 @@ const AnimalCard = ({ animal }: AnimalCardProps) => {
     <div
       className={cn(
         "relative bg-card rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group",
-        !animal.disponivel && "grayscale opacity-70"
+        !isDisponivel && "grayscale opacity-70"
       )}
     >
       {/* Status Tag */}
       <div className="absolute top-3 left-3 z-10">
-        {animal.disponivel ? (
+        {isDisponivel ? (
           <div className="flex items-center gap-1 bg-success text-success-foreground px-3 py-1 rounded-full text-xs font-semibold shadow-md">
             <Check className="w-3 h-3" />
             <span>Disponível</span>
@@ -45,19 +46,19 @@ const AnimalCard = ({ animal }: AnimalCardProps) => {
       {/* Favorite Button */}
       <button
         onClick={handleFavoriteClick}
-        disabled={!animal.disponivel}
+        disabled={!isDisponivel}
         className={cn(
           "absolute top-3 right-3 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 shadow-md",
-          animal.disponivel
+          isDisponivel
             ? "bg-white hover:scale-110"
             : "bg-gray-300 cursor-not-allowed",
-          favorite && animal.disponivel && "bg-accent"
+          favorite && isDisponivel && "bg-accent"
         )}
       >
         <Heart
           className={cn(
             "w-5 h-5 transition-colors",
-            favorite && animal.disponivel ? "fill-white text-white" : "text-accent"
+            favorite && isDisponivel ? "fill-white text-white" : "text-accent"
           )}
         />
       </button>
@@ -65,11 +66,11 @@ const AnimalCard = ({ animal }: AnimalCardProps) => {
       {/* Image */}
       <div className="aspect-square overflow-hidden">
         <img
-          src={animal.imagemUrl}
-          alt={animal.nome}
+          src={animal.fotos && animal.fotos.length > 0 ? animal.fotos[0] : "https://via.placeholder.com/400x400?text=Sem+Foto"}
+          alt={`${animal.raca} - ${animal.idade} anos`}
           className={cn(
             "w-full h-full object-cover transition-transform duration-300",
-            animal.disponivel && "group-hover:scale-110"
+            isDisponivel && "group-hover:scale-110"
           )}
         />
       </div>
@@ -77,18 +78,18 @@ const AnimalCard = ({ animal }: AnimalCardProps) => {
       {/* Content */}
       <div className="p-4">
         <h3 className="text-xl font-bold text-card-foreground mb-1">
-          {animal.nome}
+          {animal.raca} - {animal.idade} anos
         </h3>
-        <p className="text-muted-foreground text-sm mb-2">{animal.raça}</p>
+        <p className="text-muted-foreground text-sm mb-2">{animal.tamanho} • {animal.sexo}</p>
         <div className="flex items-center gap-1 text-gray-text text-sm">
           <MapPin className="w-4 h-4" />
-          <span>{animal.localizacao}</span>
+          <span>{animal.cor} • {animal.temperamento}</span>
         </div>
       </div>
     </div>
   );
 
-  if (!animal.disponivel) {
+  if (!isDisponivel) {
     return <div className="cursor-not-allowed">{CardContent}</div>;
   }
 

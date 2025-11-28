@@ -1,9 +1,16 @@
 import { useState } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { matchApi, MatchRequest, MatchResponse } from "@/services/api";
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    { text: "Olá! 👋 Bem-vindo ao AdoteAI! Como posso te ajudar hoje?", sender: "bot" },
+    { text: "Conte-me sobre suas preferências para encontrar o pet ideal!", sender: "bot" }
+  ]);
+  const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <>
@@ -47,20 +54,24 @@ const Chatbot = () => {
         {/* Chat Content */}
         <div className="h-96 p-4 overflow-y-auto bg-muted/30">
           <div className="flex flex-col gap-3">
-            <div className="bg-primary/10 rounded-lg p-3 max-w-[80%]">
-              <p className="text-sm">
-                Olá! 👋 Bem-vindo ao AdoteAI! Como posso te ajudar hoje?
-              </p>
-            </div>
-            <div className="bg-primary/10 rounded-lg p-3 max-w-[80%]">
-              <p className="text-sm">
-                Estou aqui para responder suas dúvidas sobre adoção, cuidados com pets e muito mais!
-              </p>
-            </div>
-            <div className="text-center text-xs text-muted-foreground mt-4">
-              <p>Chatbot em desenvolvimento</p>
-              <p className="mt-1">Em breve você poderá conversar conosco!</p>
-            </div>
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={cn(
+                  "rounded-lg p-3 max-w-[80%]",
+                  message.sender === "bot"
+                    ? "bg-primary/10 self-start"
+                    : "bg-accent text-accent-foreground self-end ml-auto"
+                )}
+              >
+                <p className="text-sm">{message.text}</p>
+              </div>
+            ))}
+            {isLoading && (
+              <div className="bg-primary/10 rounded-lg p-3 max-w-[80%] self-start">
+                <p className="text-sm">Pensando...</p>
+              </div>
+            )}
           </div>
         </div>
 
@@ -69,13 +80,16 @@ const Chatbot = () => {
           <div className="flex gap-2">
             <input
               type="text"
-              placeholder="Digite sua mensagem..."
-              disabled
-              className="flex-1 px-4 py-2 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground disabled:opacity-50 disabled:cursor-not-allowed"
+              placeholder="Digite suas preferências (ex: espaço, tempo, temperamento)..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+              className="flex-1 px-4 py-2 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground"
             />
             <button
-              disabled
-              className="w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={handleSend}
+              disabled={!input.trim() || isLoading}
+              className="w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-primary/90 transition-colors"
             >
               <Send className="w-5 h-5" />
             </button>

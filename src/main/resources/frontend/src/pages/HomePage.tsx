@@ -1,10 +1,30 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import AnimalCard from "@/components/AnimalCard";
 import Button from "@/components/Button";
-import { mockAnimals } from "@/data/mockAnimals";
+import { animalApi, Animal } from "@/services/api";
 import { Heart, PawPrint } from "lucide-react";
 
 const HomePage = () => {
+  const [animals, setAnimals] = useState<Animal[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchAnimals = async () => {
+      try {
+        const response = await animalApi.getAll();
+        setAnimals(response.data);
+      } catch (err) {
+        setError("Erro ao carregar animais");
+        console.error("Erro ao buscar animais:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAnimals();
+  }, []);
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -60,11 +80,22 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {mockAnimals.map((animal) => (
-              <AnimalCard key={animal.id} animal={animal} />
-            ))}
-          </div>
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+              <p className="mt-4 text-gray-text">Carregando animais...</p>
+            </div>
+          ) : error ? (
+            <div className="text-center py-12">
+              <p className="text-red-500">{error}</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {animals.map((animal) => (
+                <AnimalCard key={animal.id} animal={animal} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

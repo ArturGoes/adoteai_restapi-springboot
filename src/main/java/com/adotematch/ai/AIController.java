@@ -1,54 +1,51 @@
 package com.adotematch.ai;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 
-@Controller
+@RestController
+@RequestMapping("/api/match")
 public class AIController {
 
     private final RBC rbc = new RBC();
-    private final AStar aStar = new AStar();
-    private final PrologIntegrator prolog = new PrologIntegrator();
 
-    @GetMapping("/api")
-    public String index(Model model) {
-        model.addAttribute("message", "Bem-vindo ao AdoteMatch AI");
-        return "index";
-    }
+    @PostMapping
+    public ResponseEntity<Map<String, Object>> match(@RequestBody Map<String, Object> preferences) {
+        Map<String, Object> response = new HashMap<>();
 
-    @PostMapping("/api/rbc")
-    public String rbc(@RequestParam double space, @RequestParam double time, @RequestParam int prefTemper, Model model) {
-        Case newCase = new Case(space, time, prefTemper, 0, 0, 0, 0);
-        Case similar = rbc.retrieveSimilarCase(newCase);
-        model.addAttribute("result", "Recomendação RBC: Match = " + similar.getMatch() + " (Pet: tamanho=" + similar.getPetSize() + ", temper=" + similar.getPetTemper() + ", idade=" + similar.getPetAge() + ")");
-        return "index";
-    }
-
-    @PostMapping("/api/astar")
-    public String astar(@RequestParam double startX, @RequestParam double startY, @RequestParam int goalId, Model model) {
-        List<Node> path = aStar.findPath(startX, startY, goalId);
-        StringBuilder sb = new StringBuilder("Caminho A*: ");
-        for (Node node : path) {
-            sb.append("Abrigo ").append(node.getId()).append(" -> ");
-        }
-        model.addAttribute("result", sb.toString());
-        return "index";
-    }
-
-    @PostMapping("/api/prolog")
-    public String prolog(@RequestParam String temper, Model model) {
         try {
-            List<Map<String, String>> results = prolog.queryDogBreedsByTemper(temper);
-            model.addAttribute("result", "Raças Prolog: " + results);
+            // Extract preferences from request body
+            double space = Double.parseDouble(preferences.get("espacoEmCasa").toString());
+            double time = Double.parseDouble(preferences.get("tempoDisponivel").toString());
+            int prefTemper = Integer.parseInt(preferences.get("preferenciaTemperamento").toString());
+
+            // Execute RBC logic
+            Case newCase = new Case(space, time, prefTemper, 0, 0, 0, 0);
+            Case similar = rbc.retrieveSimilarCase(newCase);
+
+            // Create recommended animal based on RBC result
+            Animal recommendedAnimal = new Animal();
+            recommendedAnimal.setTamanho(similar.getPetSize() == 1 ? "Pequeno" :
+                                       similar.getPetSize() == 2 ? "Médio" : "Grande");
+            recommendedAnimal.setTemperamento(similar.getPetTemper() == 1 ? Animal.Temperamento.CALMO :
+                                            similar.getPetTemper() == 2 ? Animal.Temperamento.ATIVO :
+                                            similar.getPetTemper() == 3 ? Animal.Temperamento.TIMIDO :
+                                            Animal.Temperamento.SOCIÁVEL);
+            recommendedAnimal.setIdade(similar.getPetAge());
+
+            response.put("success", true);
+            response.put("animal", recommendedAnimal);
+            response.put("matchScore", similar.getMatch());
+
+            return ResponseEntity.ok(response);
+
         } catch (Exception e) {
-            model.addAttribute("result", "Erro no Prolog: " + e.getMessage());
+            response.put("success", false);
+            response.put("message", "Erro ao executar matching: " + e.getMessage());
+            return ResponseEntity.badRequest().body(response);
         }
-        return "index";
     }
 }

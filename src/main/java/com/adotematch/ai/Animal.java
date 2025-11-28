@@ -1,23 +1,71 @@
 package com.adotematch.ai;
 
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
+@Entity
+@Table(name = "animal", schema = "adocao_animais")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Animal {
-    private final String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_animal")
+    private Long id;
+
+    @Column(nullable = false)
     private String raca;
+
+    @Column(nullable = false)
     private int idade;
+
+    @Column(nullable = false)
     private String sexo;
+
+    @Column(nullable = false)
     private String tamanho;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Temperamento temperamento;
+
+    @Column(nullable = false)
     private String cor;
-    private List<Vacina> vacinasTomadas;
-    private List<Vacina> vacinasPendentes;
-    private List<String> fotos;
+
+    @ElementCollection
+    @CollectionTable(name = "vacinas_tomadas", joinColumns = @JoinColumn(name = "id_animal"))
+    @Column(name = "vacina")
+    private List<String> vacinasTomadas = new ArrayList<>();
+
+    @ElementCollection
+    @CollectionTable(name = "vacinas_pendentes", joinColumns = @JoinColumn(name = "id_animal"))
+    @Column(name = "vacina")
+    private List<String> vacinasPendentes = new ArrayList<>();
+
+    @ElementCollection
+    @CollectionTable(name = "fotos_animal", joinColumns = @JoinColumn(name = "id_animal"))
+    @Column(name = "foto_url")
+    private List<String> fotos = new ArrayList<>();
+
+    @Column(name = "data_entrada", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dataEntrada;
+
+    @Column(name = "data_saida")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dataSaida;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Status status;
 
     public enum Temperamento {
@@ -28,53 +76,13 @@ public class Animal {
         DISPONIVEL, ADOTADO, TRANSFERIDO
     }
 
-    public Animal(String raca, int idade, String sexo, String tamanho, Temperamento temperamento, String cor) {
-        this.id = UUID.randomUUID().toString();
-        this.raca = raca;
-        this.idade = idade;
-        this.sexo = sexo;
-        this.tamanho = tamanho;
-        this.temperamento = temperamento;
-        this.cor = cor;
-        this.vacinasTomadas = new ArrayList<>();
-        this.vacinasPendentes = new ArrayList<>();
-        this.fotos = new ArrayList<>();
-        this.dataEntrada = new Date();
-        this.status = Status.DISPONIVEL;
-    }
+    // Lombok will generate getters and setters
 
-    // Getters e Setters completos
-    public String getId() { return id; }
-    public String getRaca() { return raca; }
-    public void setRaca(String raca) { this.raca = raca; }
-    public int getIdade() { return idade; }
-    public void setIdade(int idade) { this.idade = idade; }
-    public String getSexo() { return sexo; }
-    public void setSexo(String sexo) { this.sexo = sexo; }
-    public String getTamanho() { return tamanho; }
-    public void setTamanho(String tamanho) { this.tamanho = tamanho; }
-    public Temperamento getTemperamento() { return temperamento; }
-    public void setTemperamento(Temperamento temperamento) { this.temperamento = temperamento; }
-    public String getCor() { return cor; }
-    public void setCor(String cor) { this.cor = cor; }
-    public List<Vacina> getVacinasTomadas() { return vacinasTomadas; }
-    public void setVacinasTomadas(List<Vacina> vacinasTomadas) { this.vacinasTomadas = vacinasTomadas; }
-    public List<Vacina> getVacinasPendentes() { return vacinasPendentes; }
-    public void setVacinasPendentes(List<Vacina> vacinasPendentes) { this.vacinasPendentes = vacinasPendentes; }
-    public List<String> getFotos() { return fotos; }
-    public void setFotos(List<String> fotos) { this.fotos = fotos; }
-    public Date getDataEntrada() { return dataEntrada; }
-    public void setDataEntrada(Date dataEntrada) { this.dataEntrada = dataEntrada; }
-    public Date getDataSaida() { return dataSaida; }
-    public void setDataSaida(Date dataSaida) { this.dataSaida = dataSaida; }
-    public Status getStatus() { return status; }
-    public void setStatus(Status status) { this.status = status; }
-
-    public void adicionarVacinaTomada(Vacina vacina) {
+    public void adicionarVacinaTomada(String vacina) {
         vacinasTomadas.add(vacina);
     }
 
-    public void adicionarVacinaPendente(Vacina vacina) {
+    public void adicionarVacinaPendente(String vacina) {
         vacinasPendentes.add(vacina);
     }
 
