@@ -1,5 +1,8 @@
 package com.adotematch.ai;
 
+import com.adotematch.ai.model.Adotante; // Import necessário para herança se houver
+import com.adotematch.ai.Animal;
+
 public class Veterinario extends Usuario {
 
     public Veterinario(String email, String senha, String nome) {
@@ -12,11 +15,12 @@ public class Veterinario extends Usuario {
     }
 
     // RF10: Atualizar vacinas
+    // CORREÇÃO: Extraímos o nome da vacina (String) antes de adicionar na lista
     public void atualizarVacina(Animal animal, Vacina vacina, boolean tomada) {
         if (tomada) {
-            animal.adicionarVacinaTomada(vacina);
+            animal.adicionarVacinaTomada(vacina.getNome());
         } else {
-            animal.adicionarVacinaPendente(vacina);
+            animal.adicionarVacinaPendente(vacina.getNome());
         }
     }
 }
