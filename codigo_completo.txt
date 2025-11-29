@@ -1,5 +1,3 @@
-
-
 --- INICIO DO ARQUIVO: C:\Users\Artur\Desktop\RestAPI_AdoteAI\adoteai_restapi-springboot\package.json ---
 {
   "name": "adoteai_restapi-springboot",
