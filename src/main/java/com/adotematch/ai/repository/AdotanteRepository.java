@@ -1,10 +1,7 @@
 package com.adotematch.ai.repository;
-
 import com.adotematch.ai.model.Adotante;
 import org.springframework.data.jpa.repository.JpaRepository;
-
+import java.util.Optional;
 public interface AdotanteRepository extends JpaRepository<Adotante, Long> {
-    Adotante findByEmail(String email);
+    Optional<Adotante> findByEmail(String email);
 }
-
-//as rotas aqui

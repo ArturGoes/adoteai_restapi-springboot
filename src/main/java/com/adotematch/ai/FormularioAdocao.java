@@ -1,5 +1,7 @@
 package com.adotematch.ai;
 
+import com.adotematch.ai.model.Adotante;
+
 public class FormularioAdocao {
     private Adotante adotante;
     private int espacoEmCasa;

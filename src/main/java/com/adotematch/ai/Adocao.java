@@ -1,5 +1,7 @@
 package com.adotematch.ai;
 
+import com.adotematch.ai.model.Adotante;
+
 import java.util.Date;
 
 public class Adocao {

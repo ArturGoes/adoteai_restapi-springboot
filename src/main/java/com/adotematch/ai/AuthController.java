@@ -1,5 +1,7 @@
 package com.adotematch.ai;
 
+import com.adotematch.ai.model.Adotante;
+
 import com.adotematch.ai.service.AdotanteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
